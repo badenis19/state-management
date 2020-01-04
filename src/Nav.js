@@ -1,15 +1,15 @@
 import React from 'react';
 
 // defining function 
-const Movie = ({name, price}) => {
+const Nav = () => {
     
     return (
         <div>
-           <h3>{name}</h3>
-           <p>{price}</p>
+           <h3>Name: </h3>
+           <p>List of Movies:  </p>
         </div>
     );
 }
 
 // exporting function
-export default Movie; 
+export default Nav; 

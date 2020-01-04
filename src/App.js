@@ -1,13 +1,18 @@
 import React from 'react';
-import MovieList from "./MovieList"
+import MovieList from "./MovieList";
+import Nav from "./Nav";
+import { MovieProvider } from "./MovieContext";
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>WORKING</h1>
-      < MovieList />
-    </div>
+    // now all the state from MovieProvider are accessible in the component wrapped inside
+    <MovieProvider>
+      <div className="App">
+        < Nav/>
+        < MovieList />
+      </div>
+    </MovieProvider>
   );
 }
 
