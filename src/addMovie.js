@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
 import { MovieContext } from "./MovieContext";
+import uuid from "uuid/v1"; // use to auto-generate unique ids (IMPORTANT - npm install uuid AND yarn install )
 
 const AddMovie = () => {
 
-    
     const [name, setName] = useState("");
-    const [price, setPrice] = useState("")
+    const [price, setPrice] = useState("");
     const [movies, setMovies] = useContext(MovieContext);
 
     const updateName = (e) => {
@@ -22,7 +22,8 @@ const AddMovie = () => {
         // previousMovies is the latest about the movie state, and add things to it 
         setMovies(previousMovies => [...previousMovies, {
             name: name,
-            price: price
+            price: price,
+            id: uuid()
         }])
     };
 
