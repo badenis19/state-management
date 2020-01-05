@@ -6,7 +6,7 @@ import { MovieProvider } from "./MovieContext";
 
 function App() {
   return (
-    // now all the state from MovieProvider are accessible in the component wrapped inside
+    // All the state from MovieProvider are accessible in the component wrapped inside
     <MovieProvider>
       <div className="App">
         < Nav/>
